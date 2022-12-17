@@ -17,7 +17,7 @@ public class casinoSlot {
     // Creating Variables
     static int bet; // Player bet Variable
 
-    static int randomMoney = 10000; // This is for random money generated, when you bet your money
+    static int randomMoney = 5500; // This is for random money generated, when you bet your money
 
     static int jackPot = 75000; // This will be a jackpot ($75k) for the slot machine. It will be very hard to win.
 
@@ -27,14 +27,14 @@ public class casinoSlot {
     static int slotMachine; // Slow Machine Variable
 
     public static void moneyGeneratedAfterBetting() {
-        int money = rnd.nextInt(randomMoney) - 100;
+        int money = rnd.nextInt(randomMoney) - 300;
         int doubledMoney = money * 2; // this will double the amount of money you win 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
     }
 
     public static void jackPot() {
-        
+        // gotta finish this last
     }
 
     public static void slotMachine() {
@@ -51,10 +51,5 @@ public class casinoSlot {
             System.out.println("\nYou have placed: " + "$" + bet);
             moneyGeneratedAfterBetting();
         }
-    }
-
-    public static void main(String[] args) {
-        // this is for testing purposes only
-        slotMachine();
     }
 }
