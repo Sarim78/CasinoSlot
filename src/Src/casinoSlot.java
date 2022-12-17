@@ -34,7 +34,7 @@ public class casinoSlot {
         // This method is called after you place a bet, it will generate a random amount money for you. 
         // Between $0 - $5500 but the amount will get double
 
-        int money = rnd.nextInt(randomMoney) - 300;
+        int money = rnd.nextInt(randomMoney) - 100;
         int doubledMoney = money * 2; // this will double the amount of money you win 
 
         System.out.println("\nYou have won: " + "$" + doubledMoney);
