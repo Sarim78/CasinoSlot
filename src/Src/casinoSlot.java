@@ -28,7 +28,12 @@ public class casinoSlot {
 
     static int slotMachine; // Slow Machine Variable
 
+    // Methods for Casino Slot Machine
     public static void moneyGeneratedAfterBetting() {
+
+        // This method is called after you place a bet, it will generate a random amount money for you. 
+        // Between $0 - $5500 but the amount will get double
+
         int money = rnd.nextInt(randomMoney) - 300;
         int doubledMoney = money * 2; // this will double the amount of money you win 
 
@@ -36,14 +41,18 @@ public class casinoSlot {
     }
 
     public static void limitedTrys() {
+        // This method is for players getting limited try's
 
     }
 
     public static void jackPot() {
-        // gotta finish this last
+        // this method is for the jackpot of $75k, it will be hard to win.
+
     }
 
     public static void slotMachine() {
+        // This is a main methid for the Slot Machine. This is were all the methods gonna get called together.
+
         System.out.println("\nPlease Place Your Bet: ");
         bet = in.nextInt(); 
 
