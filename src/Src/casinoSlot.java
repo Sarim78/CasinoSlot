@@ -33,6 +33,10 @@ public class casinoSlot {
         System.out.println("\nYou have won: " + "$" + doubledMoney);
     }
 
+    public static void jackPot() {
+        
+    }
+
     public static void slotMachine() {
         System.out.println("\nPlease Place Your Bet: ");
         bet = in.nextInt(); 
