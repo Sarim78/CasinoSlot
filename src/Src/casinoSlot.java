@@ -3,21 +3,54 @@ import java.util.Scanner;
 import java.util.Random;
 
 /**
- * Casino Slot Game
+ * Casino Slot Machine Game.
+ * This is a editied version of any casino slot machine.
  * @athuor Sarim Siddiqui
  */
 
 public class casinoSlot {
 
     // Creating Objects 
-    Random rnd = new Random();
-    Scanner in = new Scanner(System.in);
+    static Random rnd = new Random();
+    static Scanner in = new Scanner(System.in);
 
     // Creating Variables
-    double bet; // Player bet Variable
+    static int bet; // Player bet Variable
 
-    int maxBet = 20000; // Max bet that player can make is $20k
-    int minBet = 1000; // Min bet that player can make is $1k
+    static int randomMoney = 10000; // This is for random money generated, when you bet your money
 
-    double slotMachine; // Slow Machine Variable
+    static int jackPot = 75000; // This will be a jackpot ($75k) for the slot machine. It will be very hard to win.
+
+    static int maxBet = 20000; // Max bet that player can make is $20k
+    static int minBet = 1000; // Min bet that player can make is $1k
+
+    static int slotMachine; // Slow Machine Variable
+
+    public static void moneyGeneratedAfterBetting() {
+        int money = rnd.nextInt(randomMoney) - 100;
+        int doubledMoney = money * 2; // this will double the amount of money you win 
+
+        System.out.println("\nYou have won: " + "$" + doubledMoney);
+    }
+
+    public static void slotMachine() {
+        System.out.println("\nPlease Place Your Bet: ");
+        bet = in.nextInt(); 
+
+        if(bet > maxBet) {
+            System.out.println("\nYou have placed: " + "$" + bet);
+            System.out.println("Sorry, you went over the limit. The maximum limit of betting was: $20k...");
+        } else if (bet < minBet) {
+            System.out.println("\nYou have placed: " + "$" + bet);
+            System.out.println("Sorry, you went under the limit. The minimum limit of betting was: $1k...");
+        } else {
+            System.out.println("\nYou have placed: " + "$" + bet);
+            moneyGeneratedAfterBetting();
+        }
+    }
+
+    public static void main(String[] args) {
+        // this is for testing purposes only
+        slotMachine();
+    }
 }
