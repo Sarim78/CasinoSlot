@@ -47,7 +47,6 @@ public class casinoSlot {
 
     public static void jackPot() {
         // this method is for the jackpot of $75k, it will be hard to win.
-
     }
 
     public static void slotMachine() {
@@ -57,13 +56,13 @@ public class casinoSlot {
         bet = in.nextInt(); 
 
         if(bet > maxBet) {
-            System.out.println("\nYou have placed: " + "$" + bet);
+            System.out.println("\nYou have placed a bet of: " + "$" + bet);
             System.out.println("Sorry, you went over the limit. The maximum limit of betting was: $20k...");
         } else if (bet < minBet) {
-            System.out.println("\nYou have placed: " + "$" + bet);
+            System.out.println("\nYou have placed a bet of: " + "$" + bet);
             System.out.println("Sorry, you went under the limit. The minimum limit of betting was: $1k...");
         } else {
-            System.out.println("\nYou have placed: " + "$" + bet);
+            System.out.println("\nYou have placed a bet of: " + "$" + bet);
             moneyGeneratedAfterBetting();
         }
     }
